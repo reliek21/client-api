@@ -3,9 +3,8 @@ import clientAxios from "../../config/axios";
 
 import SingleCategory from "../categories/Category"
 
+
 function Categories() {
-
-
     const [categories, saveCategories] = useState([]);
 
     // Query to API

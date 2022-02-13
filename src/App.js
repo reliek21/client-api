@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import Categories from "./components/layout/Categories";
+
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+// layout
+import Product from "./components/layout/Products";
+import NewProduct from "./components/products/NewProduct";
+import NewCategory from "./components/categories/NewCategory";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <Fragment>
+                <Switch>
+                    <Route exact path="/product/new" component={NewProduct} />
+                </Switch>
+                <Product />
+                <Switch>
+                    <Route exact path="/category/new" component={NewCategory} />
+                </Switch>
+                <Categories />
+            </Fragment>
+        </BrowserRouter>
+    );
 }
 
 export default App;

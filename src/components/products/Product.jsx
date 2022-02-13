@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 
 const SingleProduct = ({ product }) => {
     const {
@@ -19,8 +21,8 @@ const SingleProduct = ({ product }) => {
             <td className="border-t-2 border-gray-200 px-4 py-3 text-sm text-gray-900">{brand}</td>
             <td className="border-t-2 border-gray-200 px-4 py-3 text-sm text-gray-900">{category.name}</td>
             <td className="border-t-2 border-gray-200 px-4 py-3 text-sm text-gray-900">${price}</td>
-            <td className="border-t-2 border-gray-200 px-4 py-3 text-sm text-gray-900"><button className="flex ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"><i className="bi bi-pencil-square"></i></button></td>
-            <td className="border-t-2 border-gray-200 px-4 py-3 text-sm text-gray-900"><button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"><i className="bi bi-trash3"></i></button></td>
+            <td className="border-t-2 border-gray-200 px-4 py-3 text-sm text-gray-900"><Link to={`/product/edit/${_id}`} className="ml-auto text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"><i className="bi bi-pencil-square"></i></Link></td>
+            <td className="border-t-2 border-gray-200 px-4 py-3 text-sm text-gray-900"><button className="ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"><i className="bi bi-trash3"></i></button></td>
         </tr>
     )
 }

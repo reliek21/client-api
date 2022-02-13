@@ -42,10 +42,7 @@ const NewCategory = ({ history }) => {
         });
 
         // reedirect to home
-        history.push('/');
-        setTimeout(() => {
-            window.location.reload();
-        }, 1500);
+        history.push('/#category');
     }
 
     // validate field of form
@@ -65,7 +62,7 @@ const NewCategory = ({ history }) => {
 
     return (
         <section className="text-gray-600 body-font">
-            <form onSubmit={addCategory} className="container px-5 py-24 mx-auto flex flex-wrap items-center">
+            <form onSubmit={addCategory} className="container px-5 py-24 mx-auto flex flex-wrap items-center" id="category">
                 <div className="lg:w-2/5 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col mx-auto w-full mt-10 md:mt-0">
                     <h2 className="text-gray-900 text-lg font-medium title-font mb-5 mx-auto">New Category</h2>
                     <div className="relative mb-4">

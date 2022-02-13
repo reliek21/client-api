@@ -1,5 +1,6 @@
 import React, { useEffect, useState, Fragment } from "react";
 import clientAxios from "../../config/axios";
+import { Link } from "react-router-dom";
 
 import SingleCategory from "../categories/Category"
 
@@ -27,7 +28,7 @@ function Categories() {
                         <h1 className="sm:text-5xl text-3xl font-medium title-font text-gray-900">Categories</h1>
                     </div>
                     <div className="flex pl-4 mt-4 lg:w-2/1 py-5 w-full mx-auto">
-                        <button className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">New Category</button>
+                        <Link to={"/category/new"} className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">New Category</Link>
                     </div>
                     <div className="lg:w-2/1 w-full mx-auto overflow-auto">
                         <table className="table-auto w-full text-left whitespace-no-wrap">

@@ -5,7 +5,7 @@ import clientAxios from '../../config/axios';
 
 
 
-const NewClient = ({history}) => {
+const NewProduct = ({ history }) => {
 
     // product = state, saveProducts = function for save state
     const [product, saveProducts] = useState({
@@ -32,7 +32,7 @@ const NewClient = ({history}) => {
 
         // send request
         clientAxios.post('/api/products', product);
-        
+
         // reedirect to home
         history.push('/')
     }
@@ -93,4 +93,4 @@ const NewClient = ({history}) => {
 }
 
 // reedirect to home
-export default withRouter(NewClient);
+export default withRouter(NewProduct);

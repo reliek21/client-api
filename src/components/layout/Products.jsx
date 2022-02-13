@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from "react";
+import { Link } from "react-router-dom";
 import clientAxios from "../../config/axios";
 
 import SingleProduct from "../products/Product"
@@ -28,9 +29,11 @@ function Products() {
                         <h1 className="sm:text-5xl text-3xl font-medium title-font text-gray-900">Products</h1>
                     </div>
                     <div className="flex pl-4 mt-4 lg:w-2/1 py-5 w-full mx-auto">
-                        <button className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">New Product</button>
                     </div>
                     <div className="lg:w-2/1 w-full mx-auto overflow-auto">
+                        <div className="flex pl-4 mt-4 lg:w-2/1 py-5 w-full mx-auto">
+                            <Link to={"/product/new"} className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">New Product</Link>
+                        </div>
                         <table className="table-auto w-full text-left whitespace-no-wrap">
                             <thead>
                                 <tr>
@@ -57,7 +60,6 @@ function Products() {
                     </div>
                 </div>
             </section>
-
         </Fragment>
     )
 }

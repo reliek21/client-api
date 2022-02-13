@@ -18,7 +18,7 @@ function Products() {
 
     useEffect(() => {
         getDataAPI();
-    }, []);
+    }, [products]);
 
 
     return (

@@ -59,10 +59,7 @@ const EditProduct = (props) => {
                 }
             });
 
-        props.history.push('/');
-        setTimeout(() => {
-            window.location.reload();
-        }, 1500);
+        props.history.push('/#products');
     }
 
 
@@ -87,7 +84,7 @@ const EditProduct = (props) => {
 
     return (
         <section className="text-gray-600 body-font">
-            <form onSubmit={updateProduct} className="container px-5 py-24 mx-auto flex flex-wrap items-center">
+            <form onSubmit={updateProduct} className="container px-5 py-24 mx-auto flex flex-wrap items-center" id="products">
                 <div className="lg:w-2/5 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col mx-auto w-full mt-10 md:mt-0">
                     <h2 className="text-gray-900 text-lg font-medium title-font mb-5 mx-auto">Edit Product</h2>
                     <div className="relative mb-4">

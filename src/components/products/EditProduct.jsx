@@ -29,7 +29,7 @@ const EditProduct = (props) => {
 
     // load data
     useEffect(() => {
-        getAPI()
+        getAPI();
     }, []);
 
     // read data from form
@@ -50,7 +50,7 @@ const EditProduct = (props) => {
             .then(res => {
                 if (res) {
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'success',
                         title: 'Updated product',
                         showConfirmButton: false,

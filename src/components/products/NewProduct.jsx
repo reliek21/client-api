@@ -35,7 +35,7 @@ const NewProduct = ({ history }) => {
         clientAxios.post('/api/products', product).then(res => {
             if (res) {
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: 'New Product created',
                     showConfirmButton: false,

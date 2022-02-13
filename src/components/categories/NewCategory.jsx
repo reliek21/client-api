@@ -32,7 +32,7 @@ const NewCategory = ({ history }) => {
         clientAxios.post('/api/categories', category).then(res => {
             if (res) {
                 Swal.fire({
-                    position: 'top-end',
+                    position: 'center',
                     icon: 'success',
                     title: 'New Category created',
                     showConfirmButton: false,

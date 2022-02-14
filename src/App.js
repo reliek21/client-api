@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Categories from "./components/layout/Categories";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // layout
 import Product from "./components/layout/Products";
@@ -18,13 +18,13 @@ function App() {
             <Fragment>
                 <Header />
                 <Switch>
-                    <Route exact path="/product/new" component={NewProduct} />
-                    <Route exact path="/product/edit/:id" component={EditProduct} />
+                    <Route exact path="/product/new" component={<NewProduct />} />
+                    <Route exact path="/product/edit/:id" component={<EditProduct />} />
                 </Switch>
                 <Product />
                 <Switch>
-                    <Route exact path="/category/new" component={NewCategory} />
-                    <Route exact path="/category/edit/:id" component={EditCategory} />
+                    <Route exact path="/category/new" component={<NewCategory />} />
+                    <Route exact path="/category/edit/:id" component={<EditCategory />} />
                 </Switch>
                 <Categories />
 

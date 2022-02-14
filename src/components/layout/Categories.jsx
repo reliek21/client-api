@@ -17,7 +17,7 @@ function Categories() {
 
     useEffect(() => {
         getDataAPI();
-    }, [categories]);
+    }, []);
 
 
     return (
